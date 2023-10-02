@@ -16,14 +16,30 @@
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Number" />
+        app:layout_constraintTop_toBottomOf="@+id/introducido" />
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="313dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="150dp"
+        android:text="Adivina el Numero"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Number"
+        android:id="@+id/introducido"
         android:layout_width="80dp"
         android:layout_height="48dp"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="216dp"
         android:layout_marginEnd="150dp"
         android:ems="10"
         android:inputType="number"
@@ -33,27 +49,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="150dp"
-        android:text="Adivina el Numero"
-        android:textAlignment="center"
-        android:textColor="#F44336"
-        android:textStyle="bold"
+        android:id="@+id/id_intentos"
+        android:layout_width="95dp"
+        android:layout_height="17dp"
+        android:text="Intentos = 0"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Titulo"
+        app:layout_constraintVertical_bias="0.922" />
 
-    <TextView
-        android:id="@+id/mesajes"
-        android:layout_width="316dp"
-        android:layout_height="113dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="410dp" />
+    <ScrollView
+        android:layout_width="147dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/mesajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
