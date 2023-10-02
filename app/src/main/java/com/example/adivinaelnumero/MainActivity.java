@@ -49,24 +49,23 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setMessage("has ganado");
                     builder.setTitle("Ganador !");
-                    builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
-                        finish();
+                    builder.setPositiveButton("OK", (DialogInterface.OnClickListener) (dialog, which) -> {
+                        recreate();
                     });
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
                 }else{
                     TextView men = findViewById(R.id.mesajes);
                     String contnum = String.valueOf(men.getText());
-                    String add = contnum+num+"\n";
+                    String add = num+"\n"+contnum;
                     men.setText(add);
                     intentos++;
                     TextView ints = findViewById(R.id.id_intentos);
                     String addint = "Intentos = "+intentos;
                     ints.setText(addint);
                     toast.show();
-
+                    et.setText("");
                 }
-
             }
         });
 
